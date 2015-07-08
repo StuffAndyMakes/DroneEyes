@@ -113,6 +113,7 @@ int main(void) {
                 state++;
                 if (state == STATE_MAX) {
                     state = STATE_OFF;
+                    allOff();
                 }
 	            while ((PINB & (1 << PB4)) == 0); // wait for release
             }
