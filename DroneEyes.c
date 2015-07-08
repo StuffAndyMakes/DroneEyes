@@ -60,9 +60,7 @@ void allOn() {
 	}
 }
 
-void allOff() {
-	PORTB = 0;
-}
+#define allOff() (PORTB = 0)
 
 void bounce() {
     turnOn(ledNum);
@@ -110,6 +108,7 @@ int main(void) {
             _delay_ms(25);
             if ((PINB & (1 << PB4)) == 0) {
                 // button is definitely pressed
+                allOff(); // prevents a single LED from being stuck on while button is down
                 state++;
                 if (state == STATE_MAX) {
                     state = STATE_OFF;
