@@ -41,7 +41,7 @@ int ledNum = 0;
 #define STATE_ALL 11
 #define STATE_MAX 12
 
-uint8_t state = STATE_ALL; // start in all on state
+uint8_t state = 1; // start in all first state (defines determine which is first, of course)
 
 int scanDir = SCAN_RIGHT;
 
