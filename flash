@@ -1,0 +1,4 @@
+#!/bin/bash
+avr-gcc -g -mmcu=attiny13 -o DroneEyes.elf DroneEyes.o
+avr-objcopy -j .text -j .data -O ihex DroneEyes.elf DroneEyes.hex
+avrdude -p t13 -P usb -c avrispmkii -U flash:w:DroneEyes.hex

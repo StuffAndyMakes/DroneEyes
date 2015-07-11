@@ -1,0 +1,2 @@
+#!/bin/bash
+avr-gcc -g -Os -mmcu=attiny13 -c DroneEyes.c
