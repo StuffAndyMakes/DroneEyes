@@ -1,7 +1,16 @@
 # DroneEyes
-A very simple little circuit controlled by an Atmel ATtiny13 microcontroller that gives your little 3.7V-powered drone crazy eyes! It's an easy mod.
 
-To keep battery usage small and efficient and to keep the part count low and cheap I've implemented Charlieplexing to control more LEDs than the little 8-pin microcontroller has available. Technically, the ATtiny13 could ontrol upwards of dozens of LEDs with only 6 pins, but DroneEyes works and looks great with six "eyes."
+This is the source code and build files for a product I sell on my site (http://www.stuffandymakes.com/products/droneeyes) called, "DroneEyes." DroneEyes gives your little 3.7V drone a little more intimidation factor with bright LEDs that flash in patterns that it saves from startup to startup.
+
+This is really just a very simple little circuit controlled by an Atmel ATtiny13 microcontroller that gives your little 3.7V-powered drone crazy eyes! It's an easy mod. Mount DroneEyes to your drone, solder power and ground from the battery to the DroneEyes board and power it up. Change modes on the DroneEyes by clicking the button. If you find your favorite mode, DroneEyes remembers that setting from power-up to power-up. You don't have to select modes over and over again.
+
+## Charlieplexing!
+To keep battery usage small and efficient and to keep the part count low and cheap I've implemented Charlieplexing to control more LEDs than the little 8-pin Atmel® ATtiny13 AVR microcontroller has available. Technically, the ATtiny13 could ontrol upwards of dozens of LEDs with only 6 pins, but DroneEyes works and looks great with six "eyes." On the Syma X5C, if you remove the original LEDs from the drone and replace them with this board, you've eliminated EIGHT LEDs that were all on at the same time and replaced them with the equivalent of ONE single LED on at a time. The beauty of Chgarlieplexing.
+
+I've written a few articles on how Charlieplexing is done with AVE microcontrolers, like Arduinos and whatnot:
+
+- http://www.stuffandymakes.com/blog/2013/04/29/charlieplexing-leds-with-an-avr-atmega328
+- http://makezine.com/projects/charlieplexing-leds-with-an-avr-atmega328-or-arduino/
 
 ## Compiling and Flashing Chip
 
